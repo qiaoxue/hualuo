@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>华络</title>
+    <script>!function (e) {
+        function t(a) {
+            if (i[a])return i[a].exports;
+            var n = i[a] = {exports: {}, id: a, loaded: !1};
+            return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+        }
+
+        var i = {};
+        return t.m = e, t.c = i, t.p = "", t(0)
+    }([function (e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {value: !0});
+        var i = window;
+        t["default"] = i.flex = function (e, t) {
+            var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+            p || d && d[1] > 534 || c || (s = 1);
+            var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+            m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+        }, e.exports = t["default"]
+    }]);
+    flex(100, 1);
+    </script>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide hl2">
+            <div class="word1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="2s"></div>
+            <div class="word2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="3s"></div>
+            <div class="word3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+                 swiper-animate-delay="4s"></div>
+        </div>
+        <div class="swiper-slide hl3">
+            <div class="bg ani" swiper-animate-effect="slideInUp" swiper-animate-duration="2s"
+                 swiper-animate-delay="0.2s"></div>
+        </div>
+        <div class="swiper-slide hl4">
+            <div class="word1" id="word1Src">
+                <p>为了家庭</p>
+                <p>为了事业</p>
+                <p>他不惜余力</p>
+                <p>奋斗着打拼着</p>
+                <div class="hl4icon"></div>
+                <p>繁重的 <span>工作</span>和<span>压力</span></p>
+                <p>日积月累</p>
+                <p>使他落下了一身的 病痛</p>
+            </div>
+            <div class="word1" id="word1Out"></div>
+        </div>
+        <div class="swiper-slide hl5">
+            <div class="hl5_icon1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.5s"></div>
+            <div class="hl5_icon2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="1.5s"></div>
+        </div>
+        <div class="swiper-slide hl6">
+            <div class="hl6_icon1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="0.5s"></div>
+            <div class="hl6_icon2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+                 swiper-animate-delay="1.5s"></div>
+        </div>
+        <div class="swiper-slide hl7">
+            <div class="word1" id="hl7Src_1">
+                <p>有多少人</p>
+                <p>像他一样</p>
+                <p>···</p>
+                <p>努力生活</p>
+                <p>换来的却是如此回报</p>
+                <div class="hl7icon"></div>
+                <p>如何才能挽救家里的顶梁柱</p>
+                <p>挽救健康 挽救我们自己 ？！</p>
+            </div>
+            <div class="word1" id="hl7Out_1"></div>
+        </div>
+        <div class="swiper-slide hl8"></div>
+        <div class="swiper-slide hl9"></div>
+        <div class="swiper-slide hl10">
+            <div class="container">
+                <ul class="infos">
+                    <li><span>姓名:</span><input type="text" placeholder="请输入您的姓名"></li>
+                    <li><span>手机:</span><input type="text" placeholder="请输入您的手机号"></li>
+                    <li><span class="textareaSpan">病症：</span>
+                        <textarea placeholder="例如： 腰椎疼痛"></textarea>
+                    </li>
+                </ul>
+                <div class="grade">
+                    <p>疼痛等级：</p>
+                    <ul class="clearfix" id="grade">
+                        <li><b>无痛</b><span class="select"></span><strong>0级</strong></li>
+                        <li><b>轻微</b><span></span><strong>1级</strong></li>
+                        <li><b>轻度</b><span></span><strong>2级</strong></li>
+                        <li><b>中度</b><span></span><strong>3级</strong></li>
+                        <li><b>重度</b><span></span><strong>4级</strong></li>
+                        <li><b>重疾</b><span></span><strong>5级</strong></li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="join" id="join"><span></span></div>
+                </div>
+                <div class="rules clearfix">
+                    <span id="rule1">活动规则</span>
+                    <span id="rule2">我有疼痛病么？</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightTop">
+        <span id="jumpOut"></span>
+        <i id="audioImg"></i>
+        <audio src="http://music.baidutt.com/up/kwcswawa/uwwwks.mp3" loop="loop" class="mis"></audio>
+    </div>
+    <div class="arrow">
+        <p class="up"></p>
+    </div>
+    <div class="activeRule" id="activeRule">
+        <span id="goBack"></span>
+    </div>
+    <div class="activeRule" id="activeRule2">
+        <span id="goBack2"></span>
+    </div>
+    <!--提交成功弹窗-->
+    <div class="commitSuccess"></div>
+    <!--验证弹窗-->
+    <div class="validateBoxBg">
+        <div class="validateBox">
+            <div class="topBox clearfix"><span>提醒</span><i class="close">×</i></div>
+            <span class="ico"></span>
+            <div class="info" id="valInfo">请输入您的病症！</div>
+            <span class="confirmBtn"></span>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/typing.min.js"></script>
+<script src="js/preload.js"></script>
+<script>
+    // 首屏加载
+    $.QianLoad.PageLoading({
+        sleep: 1000
+    }, function () {
+        $(".mis").get(0).play();
+    });
+    // 初始化 swiper
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        effect: 'fade',
+        speed: 500,
+        fade: {
+            crossFade: false
+        },
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        },
+        onTransitionEnd: function (swiper) {
+            document.getElementById('hl7Out_1').innerHTML = ''
+            document.getElementById('word1Out').innerHTML = ''
+            if (swiper.realIndex === 2) {
+                /*打字效果*/
+                var typing = new Typing({
+                    source: document.getElementById('word1Src'),
+                    output: document.getElementById('word1Out'),
+                    delay: 40
+                });
+                setTimeout(function () {
+                    typing.start();
+                }, 300)
+            }
+            if (swiper.realIndex === 5) {
+                setTimeout(function () {
+                    typing2.start();
+                }, 300)
+            }
+            if (swiper.realIndex >= 6) {
+                $('.rightTop').css('display', 'none')
+                $(".mis").get(0).pause();
+            } else {
+                $('.rightTop').css('display', 'inline-block')
+                $(".mis").get(0).play();
+            }
+            if (swiper.realIndex >= 8) {
+               $('.arrow').css('display', 'none')
+            }else{
+                $('.arrow').css('display', 'block')
+            }
+        }
+    })
+    /*jump out*/
+    $('#jumpOut').click(function () {
+        mySwiper.slideTo(6, 800)
+    })
+    // audio play
+    var flag = false;
+    $("#audioImg").click(function () {
+        console.log(1)
+        if (flag) {
+            $(".mis").get(0).play();
+            flag = false;
+            $("#audioImg").css({
+                "background-position": "0rem -0.38rem"
+            })
+        } else {
+            $(".mis").get(0).pause();
+            console.log(2)
+            $("#audioImg").css({
+                "background": "url(../images/icons.png) no-repeat",
+                "background-position": "-0.66rem -0.38rem",
+                "background-size": "5rem auto"
+            })
+            flag = true;
+        }
+    })
+
+    var typing2 = new Typing({
+        source: document.getElementById('hl7Src_1'),
+        output: document.getElementById('hl7Out_1'),
+        delay: 40
+    });
+    /*疼痛等级*/
+    $('#grade').children('li').find('span').click(function () {
+        $(this).addClass('select').parent().siblings('li').find('span').removeClass('select')
+    })
+
+    /*参加活动*/
+    $('#join').click(function () {
+        $('.validateBoxBg').css('display', 'block')
+        $('.commitSuccess').css('display', 'block');
+    })
+    /*活动规则弹窗*/
+    $('#rule1').click(function () {
+        $("#activeRule").css('display', 'block');
+    })
+    $('#goBack').click(function () {
+        $("#activeRule").css('display', 'none');
+    })
+    $('#rule2').click(function () {
+        $("#activeRule2").css('display', 'block');
+    })
+    $('#goBack2').click(function () {
+        $("#activeRule2").css('display', 'none');
+    })
+    /*验证弹窗*/
+    $('.close').click(function () {
+        $('.validateBoxBg').css('display', 'none')
+    })
+    $('.confirmBtn').click(function () {
+        $('.validateBoxBg').css('display', 'none')
+    })
+</script>
+</body>
+</html>
